@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Encriptador de texto - Challenge Alura LATAM</title>
+</head>
+
+<body>
+    <header>
+        <img class="column" id="logo" src="/assets/logo.svg">
+        <h1>.:°ENCRIPTADOR DE TEXTO°:.</h1>
+    </header>
+    <main>
+        <section class="columnInput">
+            <textarea id="enteringText" placeholder="      Ingrese el texto aquí" oninput="noMayus()"></textarea>
+            <p id="warning"><img src="/assets/exclamation.png">Solo letras
+                minúsculas y sin acentos</p>
+            <div class="botonesEncripcion">
+                <button class ="button" onclick="encrypt()" id="botonEncriptar">Encriptar</button>
+                <button class = "button" onclick="decrypt()" id="botonDesencriptar">Desencriptar</button>
+            </div>
+        </section>
+        <section class="columnOutput">
+            <div class="encrypt" hidden>
+                <p id="resultado"></p>
+                <button class = "button" onclick="copyText()" id="botonCopiar">Copiar</button>
+            </div>
+            <div class="preEncrypt">
+                <img id="muñeco" src="/assets/riddle.png">
+                <p id="noMSJ">Ningún mensaje fue encontrado</p>
+                <p id="prompt">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            
+        </section>
+    </main>
+    <footer>
+        <p>Desarrollado por Isho Juarez - Año 2024</p>
+        <a class="linkedin" href="https://www.linkedin.com/in/isho-ju%C3%A1rez-92995430a/">Encuéntrame en LinkedIn</a>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>

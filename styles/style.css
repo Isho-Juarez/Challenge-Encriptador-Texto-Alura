@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+:root{
+    --bg-textos: #c369ae;
+    --inputTextColor: #6441d7;
+    --fade:#382579;
+    --warningTextColor: #F3F5FC;
+    --desencriptarBackgroundColor:#fcaee0;
+    --noMensajeColor: #343A40;
+    --bordes:#9a4586;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+
+
+body{
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    background-image:url("/assets/background2.jpg");
+    background-size: 100vh;   
+}
+
+header{
+    padding:25px;
+    background-image: linear-gradient(var(--inputTextColor), var(--fade));
+    display:flex;
+    
+    
+}
+
+h1{
+    margin:auto;
+    font-size: 50px;
+    color:var(--desencriptarBackgroundColor)
+}
+
+main{
+    display:flex;
+    gap:80px;
+    padding:20px;
+}
+
+.columnInput{
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    gap:16px;
+}
+
+.columnOutput{
+    width: 400px;
+    background-color: var(--bg-textos);
+    border-radius: 40px;
+    box-sizing: border-box;
+    padding:12px;
+    border: 12px solid var(--bordes);
+    position: relative;
+}
+
+#enteringText{
+    width: 100%;
+    height:400px;
+    resize:none;
+    background-color:var(--bg-textos);
+    border-radius: 40px;
+    font-size:24px;
+    box-sizing: border-box;
+    border-width: 12px;
+    padding:12px;
+    border-color:var(--bordes);
+}
+
+::placeholder{
+    color:var(--desencriptarBackgroundColor);
+    font-size:24px;
+}
+
+#warning{
+    display:flex;
+    align-items: center;
+    gap:4px;
+    color:var(--warningTextColor)
+}
+
+.button{
+    font-size: 16px;
+    max-width: 328px;
+    width:100%;
+    padding:24px;
+    border-color: var(--inputTextColor);
+    border-radius: 24px;
+    
+}
+
+#botonEncriptar{
+    color:white;
+    background-color: var(--inputTextColor);
+    
+}
+
+#botonDesencriptar{
+    color:var(--inputTextColor);
+    background-color: var(--desencriptarBackgroundColor);
+    
+}
+
+#botonCopiar{
+    color:var(--inputTextColor);
+    background-color:var(--desencriptarBackgroundColor);
+    position:absolute;
+    top:80%;    
+    
+}
+
+.botonesEncripcion{
+    display:flex;
+    gap:16px;
+}
+
+.preEncrypt{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:16px;
+}
+
+#muñeco{
+    height:30vh;
+    width:fit-content;
+
+}
+
+#noMSJ{
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#prompt{
+    text-align: center;
+}
+
+
+
+#resultado{
+    font-size: 24px;
+}
+
+footer{
+    margin-top: auto;
+    text-align: center;
+    background-color: var(--inputTextColor);
+    padding: 10px;
+    color:white;
+}
+
+.linkedin{
+    color:var(--desencriptarBackgroundColor)
+}
+
+.linkedin:visited{
+    color:var(--desencriptarBackgroundColor)
+}
+
+
+
+@media (max-width:800px){
+    #muñeco{
+        display:none;
+    }
+
+    main{
+        display:flex;
+        flex-direction: column;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+
+    .columnInput{
+        align-items: center;
+    }
+
+    .button{
+        width:200px;
+    }
+
+    .columnOutput{
+        width: 100%;
+        min-height: 400px;
+        height:auto;
+        
+    }
+
+    
+}
